@@ -1,10 +1,11 @@
 {
   "name": "GuesthousePage",
   "version": "1.0.0",
-  "description": "",
+  "description": "Static website",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "parcel index.html",
+    "build": "parcel build index.html --public-url /GuesthousePage/"
   },
   "repository": {
     "type": "git",
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/zillomoons/GuesthousePage/issues"
   },
-  "homepage": "https://github.com/zillomoons/GuesthousePage#readme"
+  "homepage": "https://github.com/zillomoons/GuesthousePage#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.5",
+    "sass": "^1.32.8"
+  }
 }

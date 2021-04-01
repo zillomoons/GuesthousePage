@@ -1,0 +1,59 @@
+
+.main-container{
+    width: 1200px;
+    margin: 0 auto;
+}
+@media (max-width: 1200px){
+    .main-container {
+        width: 95%;
+    }
+} 
+.contact-title {
+    text-align: center;
+    line-height: 60px;
+    margin-top: 50px; 
+}
+#contact-form{
+    display: block;
+    max-width: 600px;
+    margin: 0 auto 50px auto;
+    border: 1px solid #c1c1c1;
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #eaeaea;
+}
+#contact-form label{
+    line-height: 2.7em;
+    font-size: 0.75em;
+}
+#contact-form textarea{
+    min-height: 100px;
+    font-size: 14px;
+}
+.input-field{
+    width: 100%;
+    padding: 10px 0;
+    background-color: #fff;
+    border-radius: 5px;
+    border: 1px solid #c1c1c1;
+    font-size: 14px;
+}
+#submit-btn{
+    margin-top: 10px;
+    width: 100%;
+    padding: 10px 0;
+    color: #fff;
+    background-color: #2d314d;
+    border: none;
+    transition: opacity 150ms ease-in-out;
+
+    &:hover {
+       opacity: 0.9;
+    }
+}
+@media(min-width:$medium){
+    label{
+        font-size: 1.25em;
+    }
+    
+}

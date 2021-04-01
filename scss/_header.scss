@@ -1,0 +1,137 @@
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  transition: 0.6s;
+  padding: 1em;
+  z-index: 200;
+
+  @media (min-width: $medium) {
+    padding: 2em;
+  }
+}
+
+.sticky {
+  padding: 0.3125em 1em;
+  background-color: $white;
+}
+
+
+header .logo {
+  position: relative;
+  font-family: $fontLogo;
+  color: $darkBlue;
+  text-decoration: none;
+  font-size: 0.75em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.3s;
+
+  &:hover {
+    opacity: 0.7;
+  }
+  @media (min-width: $medium) {
+    font-size: 1.25em;
+  }
+  
+}
+.menu_container {
+  position: fixed;
+  width: 80%;
+  right: 0%;
+  top: 0%;
+  visibility: hidden;
+  opacity: 0;
+  transition: visibility 0s linear 300ms, opacity 300ms;
+
+  &.open {
+    width: 100%;
+    top: 0%;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s linear 0s, opacity 300ms;
+    background-color: $white;
+    border-radius: 8px;
+  }
+  @media (min-width: $large) {
+    top: 3%;
+    visibility: visible;
+    opacity: 1;
+    transition: 0.6s;
+  }
+}
+
+.menu_container ul{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  list-style: none;
+  gap: 1em;
+  margin: 1em;
+  
+  @media (min-width: $large) {
+    flex-direction: row;
+  }
+}
+.menu_container ul li a {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  color: $darkBlue;
+  letter-spacing: 2px;
+  font-family: $fontTitle;
+  transition: all 0.3s ease-in-out;
+
+  &:hover{
+    opacity: 0.7;
+  }
+}
+.button_container {
+  position: relative;
+  cursor: pointer;
+  align-self: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: baseline;
+  align-items: center;
+  transition: opacity 0.35s ease-in-out;
+
+  &:hover {
+    opacity: 0.7;
+  }
+  @media (min-width: $large) {
+    display: none;
+  }
+}
+.button_container span {
+  background-color: $darkBlue;
+  width: 1.5em;
+  height: 0.15em;
+  margin: 0.15em;
+  border-radius: 0.5rem;
+  transition: all 0.4s ease-in-out;
+  transform-origin: 0 0;
+  
+  @media (min-width: $medium) {
+    width: 2em;
+    height: 0.2em;
+    margin: 0.2em;
+  } 
+}
+.active span:nth-child(1) {
+  transform: rotate(45deg) translateX(-1px);
+}    
+.active span:nth-child(2) {
+  transform: scaleX(0);
+}   
+.active span:nth-child(3) {
+  transform: rotate(-45deg) translateX(-4px);    
+} 
+
+

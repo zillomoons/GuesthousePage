@@ -1,1 +1,2 @@
-# GuesthousePage Static website with Sass pre-processors and vanila JS. Bundled with Parceljs.
+# GuesthousePage
+The static website developed with Vanilla JS and Sass pre-processors, bundled with ParcelJS.
